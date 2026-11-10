@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhavan S | Research Scholar, IIT Bombay</title>
+  <meta name="description" content="Personal & Academic website of Madhavan S (Madhavan Sridhar), Ph.D. Research Scholar in Remote Sensing at IIT Bombay.">
+  <meta name="author" content="Madhavan S">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Academicons for Google Scholar, ORCiD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Mobile Toggle Button -->
+  <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <!-- Sidebar Navigation (iPortfolio Style) -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="profile-img-container">
+        <!-- Avatar: Replace with your actual photo (e.g. assets/avatar.jpg) -->
+        <div class="profile-avatar">
+          <span>MS</span>
+        </div>
+      </div>
+      <h1 class="profile-name">Madhavan S</h1>
+      <p class="profile-role">Research Scholar &bull; IIT Bombay</p>
+
+      <div class="social-links">
+        <a href="https://github.com/Madhavan1210" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://orcid.org/0000-0003-0452-5288" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
+        <a href="https://www.linkedin.com/in/madhavan-s-245b66196/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:maddysridhar12345@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> <span>About Me</span></a></li>
+        <li><a href="#research" class="nav-link"><i class="fa-solid fa-satellite"></i> <span>Research Interests</span></a></li>
+        <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> <span>Education</span></a></li>
+        <li><a href="#experience" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> <span>Experience</span></a></li>
+        <li><a href="#publications" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> <span>Publications</span> <span class="nav-badge">13</span></a></li>
+        <li><a href="#awards" class="nav-link"><i class="fa-solid fa-trophy"></i> <span>Honors & Awards</span></a></li>
+        <li><a href="#talks" class="nav-link"><i class="fa-solid fa-microphone"></i> <span>Invited Talks</span></a></li>
+        <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> <span>Technical Skills</span></a></li>
+        <li><a href="#references" class="nav-link"><i class="fa-solid fa-users"></i> <span>References</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="mailto:maddysridhar12345@gmail.com" class="btn-sidebar-cv">
+        <i class="fa-solid fa-file-pdf"></i> Request / Download CV
+      </a>
+      <p class="copyright">&copy; 2026 Madhavan S.<br>Hosted on GitHub Pages.</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main id="main" class="main-content">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span> Open for Research Collaborations
+        </div>
+        <h1 class="hero-title">Hello, I'm <span class="text-gradient">Madhavan S</span></h1>
+        <p class="hero-subtitle">
+          I am a <span class="typed-text" id="typedText"></span><span class="typing-cursor">&nbsp;</span>
+        </p>
+        <p class="hero-description">
+          Ph.D. Research Scholar at the <strong>Indian Institute of Technology Bombay (IITB)</strong>, working on satellite altimetry, SAR, LiDAR remote sensing, deep learning, and 3D historic building information modelling.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#publications" class="btn btn-primary"><i class="fa-solid fa-book"></i> View Publications</a>
+          <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        </div>
+
+        <!-- Quick Metrics Counter Strip -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">13</span>
+            <span class="stat-label">Total Publications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">First Author Papers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Awards & Grants</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">9.25</span>
+            <span class="stat-label">Ph.D. CPI (IIT Bombay)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio">
+          <p class="lead">
+            I am a remote sensing and geospatial scientist currently pursuing my Ph.D. in <strong>Civil Engineering (Remote Sensing)</strong> at <strong>IIT Bombay</strong>.
+          </p>
+          <p>
+            My doctoral research focuses on developing a multi-sensor remote sensing framework for <strong>Sea Ice Thickness Estimation using Satellite Altimetry and Synthetic Aperture Radar (SAR)</strong>, under the guidance of Prof. RAAJ Ramsankaran and Dr. Vishnu Nandan.
+          </p>
+          <p>
+            Prior to joining IIT Bombay, I completed my M.Tech. at the <strong>Indian Institute of Remote Sensing (IIRS-ISRO)</strong>, specializing in Satellite Image Analysis and Photogrammetry, where I developed deep learning frameworks for 3D semantic segmentation of point clouds for Historic Building Information Modelling (HBIM).
+          </p>
+          
+          <div class="info-badges">
+            <span class="badge"><i class="fa-solid fa-location-dot"></i> Mumbai, India</span>
+            <span class="badge"><i class="fa-solid fa-university"></i> IIT Bombay</span>
+            <span class="badge"><i class="fa-solid fa-rocket"></i> Former IIRS-ISRO Scholar</span>
+            <span class="badge"><i class="fa-solid fa-medal"></i> CIT Chennai Rank 1st</span>
+          </div>
+        </div>
+
+        <div class="about-details-card">
+          <h3 class="card-title">Quick Information</h3>
+          <ul class="details-list">
+            <li><strong>Full Name:</strong> Madhavan S (Madhavan Sridhar)</li>
+            <li><strong>Current Role:</strong> Ph.D. Research Scholar & TA</li>
+            <li><strong>Department:</strong> Department of Civil Engineering</li>
+            <li><strong>Institution:</strong> Indian Institute of Technology Bombay</li>
+            <li><strong>Email:</strong> <a href="mailto:maddysridhar12345@gmail.com">maddysridhar12345@gmail.com</a></li>
+            <li><strong>Languages:</strong> Tamil (Native), English (C1), Hindi (B1)</li>
+            <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-0452-5288" target="_blank">0000-0003-0452-5288</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section id="research" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Focus Areas</span>
+        <h2 class="section-title">Research Interests</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="research-cards-grid">
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-satellite"></i></div>
+          <h3>Satellite Altimetry & SAR</h3>
+          <p>Multi-sensor frameworks for polar sea ice thickness estimation, radar altimetry waveform analysis, and microwave remote sensing observations.</p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+          <h3>LiDAR & 3D Point Cloud Analysis</h3>
+          <p>Terrestrial and airborne LiDAR scanning, dense 3D point cloud processing, and geometric digital twin modeling.</p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Deep Learning & Semantic Segmentation</h3>
+          <p>Neural networks applied to 3D point clouds for architectural component classification, Nagara-style heritage datasets, and automated feature extraction.</p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-monument"></i></div>
+          <h3>Historic BIM (HBIM) & Photogrammetry</h3>
+          <p>Close-range photogrammetry, archival cartography, 3D heritage documentation, and digital preservation of structural assets.</p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3>Geospatial AI & Environmental Monitoring</h3>
+          <p>IoT- and GIS-driven environmental impact assessment, urban growth dynamics tracking over centuries, and landfill/dump yard hazard analysis.</p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>Surveying & Spatial Analytics</h3>
+          <p>Advanced GNSS/geodesy, spatial interpolation, route-choice risk modeling for waste management, and hydrological monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- Ph.D. -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-period">07/2025 – Present</span>
+              <span class="grade-badge">CPI: 9.25 / 10.00</span>
+            </div>
+            <h3 class="timeline-title">Ph.D. in Civil Engineering (Remote Sensing)</h3>
+            <h4 class="timeline-institution">Indian Institute of Technology Bombay (IITB), Mumbai, India</h4>
+            <div class="thesis-box">
+              <p><strong>Thesis:</strong> <em>A Multi-Sensor Remote Sensing Framework for Sea Ice Thickness Estimation Using Satellite Altimetry and SAR</em></p>
+              <p class="advisors"><strong>Advisor:</strong> Prof. RAAJ Ramsankaran | <strong>Co-Advisor:</strong> Dr. Vishnu Nandan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- M.Tech. -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-period">08/2023 – 06/2025</span>
+              <span class="grade-badge">CGPA: 8.80 / 10.00</span>
+            </div>
+            <h3 class="timeline-title">M.Tech. in Remote Sensing and GIS</h3>
+            <span class="specialization">Specialisation in Satellite Image Analysis and Photogrammetry</span>
+            <h4 class="timeline-institution">Indian Institute of Remote Sensing (IIRS-ISRO), Dehradun, India</h4>
+            <div class="thesis-box">
+              <p><strong>Thesis:</strong> <em>Deep Learning-Based Semantic Segmentation of Point Cloud for Historic Building Information Modelling</em></p>
+              <p class="advisors"><strong>Advisor:</strong> Dr. Hina Pande | <strong>Co-Advisor:</strong> Dr. Poonam Seth Tiwari</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- B.E. -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-period">07/2019 – 05/2023</span>
+              <span class="grade-badge highlight-gold">CGPA: 9.35 / 10.00 &bull; Rank 1st</span>
+            </div>
+            <h3 class="timeline-title">B.E. in Civil Engineering</h3>
+            <h4 class="timeline-institution">Chennai Institute of Technology (CIT Chennai), Kundrathur, India</h4>
+            <div class="thesis-box">
+              <p><strong>Thesis:</strong> <em>Environmental Impact of Construction and Demolition Waste on Air and Water Quality</em></p>
+              <p class="advisors"><strong>Advisor:</strong> Dr. P. Partheeban | <strong>Co-Advisor:</strong> Mr. C. Hariharasudhan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC EXPERIENCE -->
+    <section id="experience" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Teaching & Leadership</span>
+        <h2 class="section-title">Academic Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="exp-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <div class="exp-details">
+            <span class="exp-period">Apr 2026 – Present</span>
+            <h3>Board of Studies Member – Civil Engineering</h3>
+            <p class="exp-org">Chennai Institute of Technology (Alumnus Category)</p>
+            <p class="exp-desc">
+              Contributing to curriculum development, syllabus design, academic planning, and incorporating emerging geospatial and digital technologies into undergraduate engineering programs.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="exp-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+          <div class="exp-details">
+            <span class="exp-period">Jan 2026 – Present</span>
+            <h3>Teaching Assistant (TA)</h3>
+            <p class="exp-org">Indian Institute of Technology Bombay</p>
+            <p class="exp-courses"><strong>Courses:</strong> CE659: Advanced Surveying &bull; CE630: Geographical Information Systems in Civil Engineering</p>
+            <p class="exp-instructor"><strong>Instructor:</strong> Prof. Raaj Ramsankaran</p>
+            <p class="exp-desc">
+              Preparation of lecture slides and laboratory manuals, coordination of field survey camp activities, practical demonstrations, and examination invigilation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="section">
+      <div class="section-header">
+        <span class="section-tag">Scholarly Works</span>
+        <h2 class="section-title">Publications (13)</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Publication Summary Card -->
+      <div class="pub-summary-bar">
+        <div class="pub-sum-item">
+          <span class="num">8</span>
+          <span class="txt">Peer-Reviewed Journals</span>
+        </div>
+        <div class="pub-sum-item">
+          <span class="num">2</span>
+          <span class="txt">International Conferences</span>
+        </div>
+        <div class="pub-sum-item">
+          <span class="num">3</span>
+          <span class="txt">National Abstracts</span>
+        </div>
+        <div class="pub-sum-item highlight">
+          <span class="num">5</span>
+          <span class="txt">First Author Papers</span>
+        </div>
+      </div>
+
+      <!-- Filter Controls & Search -->
+      <div class="pub-controls">
+        <div class="pub-filters" id="pubFilters">
+          <button class="filter-btn active" data-filter="all">All (13)</button>
+          <button class="filter-btn" data-filter="journal">Journals (8)</button>
+          <button class="filter-btn" data-filter="conference">Int'l Conferences (2)</button>
+          <button class="filter-btn" data-filter="abstract">National Abstracts (3)</button>
+          <button class="filter-btn" data-filter="first-author">First Author (5)</button>
+        </div>
+        <div class="pub-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="pubSearchInput" placeholder="Filter by title, author, keyword...">
+        </div>
+      </div>
+
+      <!-- Publication Items Container -->
+      <div class="publications-list" id="publicationsList">
+
+        <!-- JOURNAL 1 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-year">2026</span>
+          </div>
+          <h3 class="pub-title">Historic Building Information Modelling Framework using Terrestrial LiDAR for Heritage Documentation and Digital Twin Creation</h3>
+          <p class="pub-authors">Anurupa Goswami, <strong>Madhavan Sridhar</strong>, Hina Pande, Poonam S. Tiwari, and Shefali Agrawal</p>
+          <p class="pub-venue"><em>Journal of the Indian Society of Remote Sensing</em>, 2026.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j1')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j1" class="bibtex-box">@article{goswami2026historic,
+  title={Historic Building Information Modelling Framework using Terrestrial LiDAR for Heritage Documentation and Digital Twin Creation},
+  author={Goswami, Anurupa and Sridhar, Madhavan and Pande, Hina and Tiwari, Poonam S and Agrawal, Shefali},
+  journal={Journal of the Indian Society of Remote Sensing},
+  year={2026}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 2 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="true">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-cat first-auth">First Author</span>
+            <span class="badge-year">2026</span>
+          </div>
+          <h3 class="pub-title">A Deep Learning-Based Semantic Segmentation Framework for 3D Reconstruction of Heritage Architecture</h3>
+          <p class="pub-authors"><strong>Madhavan Sridhar</strong>, Akshay Paygude, Hina Pande, and Poonam S. Tiwari</p>
+          <p class="pub-venue"><em>Measurement</em>, 259:119685, 2026.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j2')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j2" class="bibtex-box">@article{sridhar2026deep,
+  title={A Deep Learning-Based Semantic Segmentation Framework for 3D Reconstruction of Heritage Architecture},
+  author={Sridhar, Madhavan and Paygude, Akshay and Pande, Hina and Tiwari, Poonam S},
+  journal={Measurement},
+  volume={259},
+  pages={119685},
+  year={2026}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 3 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="true">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-cat first-auth">First Author</span>
+            <span class="badge-year">2025</span>
+          </div>
+          <h3 class="pub-title">An Integrated Geospatial Framework for Monitoring Built-Up Area Growth in Historic Cities Using Archival Maps and Remote Sensing</h3>
+          <p class="pub-authors"><strong>Madhavan Sridhar</strong>, Om Singh Lilhare, Hina Pande, and Poonam S. Tiwari</p>
+          <p class="pub-venue"><em>Journal of Geomatics</em>, 19(2):255–268, 2025.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j3')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j3" class="bibtex-box">@article{sridhar2025integrated,
+  title={An Integrated Geospatial Framework for Monitoring Built-Up Area Growth in Historic Cities Using Archival Maps and Remote Sensing},
+  author={Sridhar, Madhavan and Lilhare, Om Singh and Pande, Hina and Tiwari, Poonam S},
+  journal={Journal of Geomatics},
+  volume={19},
+  number={2},
+  pages={255--268},
+  year={2025}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 4 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-year">2025</span>
+          </div>
+          <h3 class="pub-title">Assessment of Harmful Gases Emission and Its Impact Using IoT and Geospatial Technology</h3>
+          <p class="pub-authors">Udhayabanu Elangovan, Ranganathan Rani Hemamalini, Pachaivannan Partheeban, and <strong>Madhavan Sridhar</strong></p>
+          <p class="pub-venue"><em>Measurement</em>, 242:115966, 2025.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j4')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j4" class="bibtex-box">@article{elangovan2025assessment,
+  title={Assessment of Harmful Gases Emission and Its Impact Using IoT and Geospatial Technology},
+  author={Elangovan, Udhayabanu and Hemamalini, Ranganathan Rani and Partheeban, Pachaivannan and Sridhar, Madhavan},
+  journal={Measurement},
+  volume={242},
+  pages={115966},
+  year={2025}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 5 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="true">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-cat first-auth">First Author</span>
+            <span class="badge-year">2024</span>
+          </div>
+          <h3 class="pub-title">Risk Analysis of Route Choices for Construction and Demolition Waste Disposal Planning Using Geospatial Technology</h3>
+          <p class="pub-authors"><strong>Madhavan Sridhar</strong>, Pachaivannan Partheeban, Jothi Prakash Kamalakannan, and Anuradha Baskaran</p>
+          <p class="pub-venue"><em>Environmental Monitoring and Assessment</em>, 197:34, 2024.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j5')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j5" class="bibtex-box">@article{sridhar2024risk,
+  title={Risk Analysis of Route Choices for Construction and Demolition Waste Disposal Planning Using Geospatial Technology},
+  author={Sridhar, Madhavan and Partheeban, Pachaivannan and Kamalakannan, Jothi Prakash and Baskaran, Anuradha},
+  journal={Environmental Monitoring and Assessment},
+  volume={197},
+  pages={34},
+  year={2024}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 6 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-year">2024</span>
+          </div>
+          <h3 class="pub-title">Wireless Sensor Network Technology and Geospatial Technology for Groundwater Quality Monitoring</h3>
+          <p class="pub-authors">Jayaraman Venkatesh, Pachaivannan Partheeban, Anuradha Baskaran, Deepa Krishnan, and <strong>Madhavan Sridhar</strong></p>
+          <p class="pub-venue"><em>Journal of Industrial Information Integration</em>, 38:100569, 2024.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j6')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j6" class="bibtex-box">@article{venkatesh2024wireless,
+  title={Wireless Sensor Network Technology and Geospatial Technology for Groundwater Quality Monitoring},
+  author={Venkatesh, Jayaraman and Partheeban, Pachaivannan and Baskaran, Anuradha and Krishnan, Deepa and Sridhar, Madhavan},
+  journal={Journal of Industrial Information Integration},
+  volume={38},
+  pages={100569},
+  year={2024}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 7 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-year">2023</span>
+          </div>
+          <h3 class="pub-title">Air Quality Monitoring and Analysis for Sustainable Development of Solid Waste Dump Yards Using Smart Drones and Geospatial Technology</h3>
+          <p class="pub-authors">Rani Hemamalini Ranganathan, Shanthini Balusamy, Pachaivannan Partheeban, Charumathy Mani, <strong>Madhavan Sridhar</strong>, and Vinodhini Rajasekaran</p>
+          <p class="pub-venue"><em>Sustainability</em>, 15(18):13347, 2023.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j7')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j7" class="bibtex-box">@article{ranganathan2023air,
+  title={Air Quality Monitoring and Analysis for Sustainable Development of Solid Waste Dump Yards Using Smart Drones and Geospatial Technology},
+  author={Ranganathan, Rani Hemamalini and Balusamy, Shanthini and Partheeban, Pachaivannan and Mani, Charumathy and Sridhar, Madhavan and Rajasekaran, Vinodhini},
+  journal={Sustainability},
+  volume={15},
+  number={18},
+  pages={13347},
+  year={2023}
+}</pre>
+        </article>
+
+        <!-- JOURNAL 8 -->
+        <article class="pub-item" data-category="journal" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat journal">Journal</span>
+            <span class="badge-year">2023</span>
+          </div>
+          <h3 class="pub-title">IoT- and GIS-Based Environmental Impact Assessment of Construction and Demolition Waste Dump Yards</h3>
+          <p class="pub-authors">Hariharasudhan Chandrasekaran, Suresh Ellappa Subramani, Pachaivannan Partheeban, and <strong>Madhavan Sridhar</strong></p>
+          <p class="pub-venue"><em>Sustainability</em>, 15(17):13013, 2023.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-j8')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-j8" class="bibtex-box">@article{chandrasekaran2023iot,
+  title={IoT- and GIS-Based Environmental Impact Assessment of Construction and Demolition Waste Dump Yards},
+  author={Chandrasekaran, Hariharasudhan and Subramani, Suresh Ellappa and Partheeban, Pachaivannan and Sridhar, Madhavan},
+  journal={Sustainability},
+  volume={15},
+  number={17},
+  pages={13013},
+  year={2023}
+}</pre>
+        </article>
+
+        <!-- INT CONF 1 -->
+        <article class="pub-item" data-category="conference" data-firstauthor="true">
+          <div class="pub-badge-row">
+            <span class="badge-cat conf">Int'l Conference</span>
+            <span class="badge-cat first-auth">First Author</span>
+            <span class="badge-year">2025</span>
+          </div>
+          <h3 class="pub-title">3DITA – A 3D Benchmark Dataset for Nagara-Style Indian Temple Architecture</h3>
+          <p class="pub-authors"><strong>Madhavan Sridhar</strong>, Akshay Paygude, Hina Pande, and Poonam S. Tiwari</p>
+          <p class="pub-venue"><em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, XLVIII-M-9-2025, pp. 1435–1441, 2025. <strong>CIPA Symposium 2025</strong>.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-c1')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-c1" class="bibtex-box">@inproceedings{sridhar20253dita,
+  title={3DITA - A 3D Benchmark Dataset for Nagara-Style Indian Temple Architecture},
+  author={Sridhar, Madhavan and Paygude, Akshay and Pande, Hina and Tiwari, Poonam S},
+  booktitle={ISPRS Archives},
+  volume={XLVIII-M-9-2025},
+  pages={1435--1441},
+  year={2025},
+  organization={CIPA Symposium 2025}
+}</pre>
+        </article>
+
+        <!-- INT CONF 2 -->
+        <article class="pub-item" data-category="conference" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat conf">Int'l Conference</span>
+            <span class="badge-year">2025</span>
+          </div>
+          <h3 class="pub-title">Cross-Domain Urban and Heritage Point Cloud Benchmarks for Semantic Segmentation: Insights from the 3M (Mapping Mappano Municipality) and ArCHX Datasets</h3>
+          <p class="pub-authors">F. Matrone, A. M. Lingua, A. Murtiyoso, <strong>Madhavan Sridhar</strong>, L. J. Sanchez Aparicio, R. Santamaria Maestro, P. Sanz-Honrado, Hina Pande, Poonam Seth Tiwari, and Shefali Agrawal</p>
+          <p class="pub-venue"><em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, XLVIII-1/W6-2025, pp. 131–137, 2025.</p>
+          <div class="pub-actions">
+            <a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank" class="btn-pub-link"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="btn-pub-bib" onclick="toggleBibtex('bib-c2')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+          </div>
+          <pre id="bib-c2" class="bibtex-box">@inproceedings{matrone2025cross,
+  title={Cross-Domain Urban and Heritage Point Cloud Benchmarks for Semantic Segmentation: Insights from the 3M and ArCHX Datasets},
+  author={Matrone, F and Lingua, AM and Murtiyoso, A and Sridhar, Madhavan and others},
+  booktitle={ISPRS Archives},
+  volume={XLVIII-1/W6-2025},
+  pages={131--137},
+  year={2025}
+}</pre>
+        </article>
+
+        <!-- NAT ABSTRACT 1 -->
+        <article class="pub-item" data-category="abstract" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat abstract">National Abstract</span>
+            <span class="badge-year">2024</span>
+          </div>
+          <h3 class="pub-title">Deep Learning-Based HBIM Framework Using Terrestrial LiDAR for Heritage Documentation and Digital Twin Creation</h3>
+          <p class="pub-authors">Anurupa Goswami, <strong>Madhavan Sridhar</strong>, Hina Pande, Poonam Seth Tiwari, and Shefali Agrawal</p>
+          <p class="pub-venue"><em>National Symposium on Remote Sensing for Sustainable Future</em>, Lucknow, India, 2024.</p>
+        </article>
+
+        <!-- NAT ABSTRACT 2 -->
+        <article class="pub-item" data-category="abstract" data-firstauthor="true">
+          <div class="pub-badge-row">
+            <span class="badge-cat abstract">National Abstract</span>
+            <span class="badge-cat first-auth">First Author</span>
+            <span class="badge-year">2024</span>
+          </div>
+          <h3 class="pub-title">Tracking 200 Years of Urban Growth Dynamics Using Historical Maps and Remote Sensing Data</h3>
+          <p class="pub-authors"><strong>Madhavan Sridhar</strong>, Om Singh Lilhare, Hina Pande, and Poonam Seth Tiwari</p>
+          <p class="pub-venue"><em>44th INCA International Congress</em>, Kevadia, India, 2024.</p>
+        </article>
+
+        <!-- NAT ABSTRACT 3 -->
+        <article class="pub-item" data-category="abstract" data-firstauthor="false">
+          <div class="pub-badge-row">
+            <span class="badge-cat abstract">National Abstract</span>
+            <span class="badge-year">2023</span>
+          </div>
+          <h3 class="pub-title">Geochemical Analysis and Impact Study on Seawater Intrusion in Chennai</h3>
+          <p class="pub-authors">Anuradha B., Packialakshmi S., Partheeban P., <strong>Madhavan Sridhar</strong>, and Jothi Prakash K.</p>
+          <p class="pub-venue"><em>SPICE 2023</em>, Chennai, India, 2023.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- HONORS & AWARDS -->
+    <section id="awards" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Recognition</span>
+        <h2 class="section-title">Honors, Awards & Grants</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="awards-grid">
+        <div class="award-card highlight-card">
+          <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="award-body">
+            <span class="award-date">Feb 2026</span>
+            <h3>Best Use of Data Award</h3>
+            <p class="award-issuer">Riverathon 1.0 &bull; Namami Gange Programme, Ministry of Jal Shakti, Govt. of India</p>
+            <p class="award-prize"><i class="fa-solid fa-gift"></i> Cash Prize: <strong>₹50,000</strong> (Held at Amity University, Noida)</p>
+          </div>
+        </div>
+
+        <div class="award-card highlight-card">
+          <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-body">
+            <span class="award-date">Mar 2025</span>
+            <h3>First Place – Poster Competition</h3>
+            <p class="award-issuer">IIRS Academia Meet 2025 &bull; Indian Institute of Remote Sensing (ISRO)</p>
+            <p class="award-desc">Awarded for Master's research presentation on <em>"Deep Learning-Based Semantic Segmentation of Point Cloud for Historic Building Information Modelling (HBIM)."</em></p>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="award-body">
+            <span class="award-date">Mar 2025</span>
+            <h3>Champion – IIT Bombay Geospatial Mapathon 2024</h3>
+            <p class="award-issuer">IIT Bombay FOSSEE &bull; Edition IV</p>
+            <p class="award-desc">Organized under NMEICT with IIT Tirupati, DST, ICFOSS, and Rural Data Research & Analysis Lab.</p>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="award-body">
+            <span class="award-date">Feb 2025</span>
+            <h3>Rank Holder (1st Position) – B.E. Civil Engineering</h3>
+            <p class="award-issuer">Chennai Institute of Technology (Batch 2019–2023)</p>
+            <p class="award-desc">Ranked 1st among 41 candidates based on outstanding academic performance (CGPA: 9.35/10.00).</p>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="award-body">
+            <span class="award-date">Nov 2023</span>
+            <h3>Student Project Scheme Award</h3>
+            <p class="award-issuer">Tamil Nadu State Council for Science and Technology (TNSCST)</p>
+            <p class="award-prize"><i class="fa-solid fa-money-bill-wave"></i> Research Grant: <strong>₹7,500</strong> for leading research on eco-friendly geopolymer concrete using waste tyre rubber and nanomaterials.</p>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon"><i class="fa-solid fa-earth-asia"></i></div>
+          <div class="award-body">
+            <span class="award-date">Mar 2023</span>
+            <h3>Third Place – GeoJourney Event</h3>
+            <p class="award-issuer">GeoHorizon 2023 &bull; Institute of Remote Sensing (IRS), Anna University, Chennai</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVITED TALKS & COMMUNITY SERVICE -->
+    <section id="talks" class="section">
+      <div class="section-header">
+        <span class="section-tag">Presentations & Engagement</span>
+        <h2 class="section-title">Invited Talks & Community Service</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="talks-service-grid">
+        <!-- Invited Talks Column -->
+        <div class="talks-col">
+          <h3 class="col-title"><i class="fa-solid fa-microphone-lines"></i> Invited Talks</h3>
+
+          <div class="talk-item">
+            <div class="talk-date">18 July 2025</div>
+            <h4>Practical Use of Close-Range Photogrammetry</h4>
+            <p class="talk-event">Short-Term Training Programme on Photogrammetry in Heritage Documentation and Conservation</p>
+            <p class="talk-org"><i class="fa-solid fa-building-columns"></i> National Institute of Technology (NIT) Patna (Online Lecture)</p>
+          </div>
+
+          <div class="talk-item">
+            <div class="talk-date">23 June 2025</div>
+            <h4>Deep Learning Based Semantic Segmentation of Point Cloud for Historic Building Information Modelling</h4>
+            <p class="talk-event">CIPA Emerging Professionals (EP) PYTDR Talk Series</p>
+            <p class="talk-org"><i class="fa-solid fa-globe"></i> International Invited Online Talk</p>
+          </div>
+        </div>
+
+        <!-- Community Service Column -->
+        <div class="service-col">
+          <h3 class="col-title"><i class="fa-solid fa-id-card-clip"></i> Professional Memberships</h3>
+
+          <div class="membership-card">
+            <div class="mem-badge">ISRS</div>
+            <div>
+              <h4>Indian Society of Remote Sensing</h4>
+              <p class="mem-status"><i class="fa-solid fa-check-circle"></i> <strong>Life Member</strong> (since July 2024)</p>
+            </div>
+          </div>
+
+          <div class="membership-card">
+            <div class="mem-badge">ISPRS</div>
+            <div>
+              <h4>International Society for Photogrammetry and Remote Sensing</h4>
+              <p class="mem-status"><i class="fa-solid fa-calendar-check"></i> Individual Member (2026 – 2027)</p>
+            </div>
+          </div>
+
+          <div class="membership-card">
+            <div class="mem-badge">ISPRS-SC</div>
+            <div>
+              <h4>ISPRS Student Consortium</h4>
+              <p class="mem-status"><i class="fa-solid fa-calendar-check"></i> Individual Member (2026 – 2027)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Competencies</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming & Analytics</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">MATLAB</span>
+            <span class="skill-pill">PyTorch / Deep Learning</span>
+            <span class="skill-pill">Data Analysis & Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-satellite-dish"></i>
+            <h3>Geospatial & Remote Sensing</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">QGIS</span>
+            <span class="skill-pill">ArcGIS</span>
+            <span class="skill-pill">Google Earth Engine (GEE)</span>
+            <span class="skill-pill">ERDAS Imagine</span>
+            <span class="skill-pill">ENVI</span>
+            <span class="skill-pill">eCognition</span>
+            <span class="skill-pill">SAR & Altimetry</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-camera"></i>
+            <h3>Photogrammetry</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Pix4D</span>
+            <span class="skill-pill">Agisoft Metashape</span>
+            <span class="skill-pill">Bentley ContextCapture</span>
+            <span class="skill-pill">Close-Range Photogrammetry</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-cubes-stacked"></i>
+            <h3>CAD & 3D Point Cloud</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">CloudCompare</span>
+            <span class="skill-pill">AutoCAD</span>
+            <span class="skill-pill">Trimble Business Center (TBC)</span>
+            <span class="skill-pill">Terrestrial LiDAR Processing</span>
+            <span class="skill-pill">HBIM Modeling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES SECTION -->
+    <section id="references" class="section">
+      <div class="section-header">
+        <span class="section-tag">Academic Mentors</span>
+        <h2 class="section-title">References</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="references-grid">
+        <div class="ref-card">
+          <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Prof. RAAJ Ramsankaran</h3>
+          <span class="ref-relation">Ph.D. Advisor</span>
+          <p class="ref-pos">Professor, Department of Civil Engineering</p>
+          <p class="ref-inst">Indian Institute of Technology Bombay</p>
+          <p class="ref-loc"><i class="fa-solid fa-location-dot"></i> Powai, Mumbai, Maharashtra, India</p>
+          <a href="mailto:ramsankaran@civil.iitb.ac.in" class="ref-email"><i class="fa-solid fa-envelope"></i> ramsankaran@civil.iitb.ac.in</a>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Dr. Hina Pande</h3>
+          <span class="ref-relation">M.Tech. Advisor</span>
+          <p class="ref-pos">Scientist SG, Photogrammetry & Remote Sensing Dept.</p>
+          <p class="ref-inst">Indian Institute of Remote Sensing (ISRO)</p>
+          <p class="ref-loc"><i class="fa-solid fa-location-dot"></i> Dehradun, Uttarakhand, India</p>
+          <a href="mailto:hina@iirs.gov.in" class="ref-email"><i class="fa-solid fa-envelope"></i> hina@iirs.gov.in</a>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Dr. P. Partheeban</h3>
+          <span class="ref-relation">B.E. Advisor</span>
+          <p class="ref-pos">Professor & Dean Planning and Development</p>
+          <p class="ref-inst">Chennai Institute of Technology (CIT Chennai)</p>
+          <p class="ref-loc"><i class="fa-solid fa-location-dot"></i> Kundrathur, Chennai, India</p>
+          <a href="mailto:dean.pd@citchennai.net" class="ref-email"><i class="fa-solid fa-envelope"></i> dean.pd@citchennai.net</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3>Email</h3>
+          <p><a href="mailto:maddysridhar12345@gmail.com">maddysridhar12345@gmail.com</a></p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Location</h3>
+          <p>Department of Civil Engineering,<br>IIT Bombay, Powai, Mumbai - 400076, India</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <h3>GitHub Profile</h3>
+          <p><a href="https://github.com/Madhavan1210" target="_blank">github.com/Madhavan1210</a></p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="ai ai-google-scholar"></i></div>
+          <h3>Google Scholar</h3>
+          <p><a href="https://scholar.google.com/citations?hl=en&user=akj-0NEAAAAJ" target="_blank">Madhavan Sridhar</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Madhavan S. All rights reserved.</p>
+        <p class="footer-sub">Designed for academic research &bull; Ready for deployment to <a href="https://madhavan1210.github.io/" target="_blank">Madhavan1210.github.io</a></p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Custom JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
