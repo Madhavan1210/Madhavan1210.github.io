@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAlt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgAlt)"/>
+  <!-- Sea ice contours & radar pulse arcs -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.35">
+    <circle cx="300" cy="50" r="80" stroke-dasharray="4,4"/>
+    <circle cx="300" cy="50" r="140" stroke-dasharray="6,6"/>
+    <circle cx="300" cy="50" r="210" stroke-dasharray="8,8"/>
+    <circle cx="300" cy="50" r="280"/>
+  </g>
+  <!-- Satellite icon top -->
+  <g transform="translate(300,50)" fill="#60a5fa" opacity="0.5">
+    <rect x="-15" y="-10" width="30" height="20" rx="3"/>
+    <rect x="-55" y="-8" width="35" height="16" fill="#2563eb" rx="2"/>
+    <rect x="20" y="-8" width="35" height="16" fill="#2563eb" rx="2"/>
+  </g>
+  <!-- Sea ice floes & echo waveforms bottom -->
+  <path d="M0,320 Q120,280 240,300 T420,290 T600,310 L600,400 L0,400 Z" fill="#0284c7" opacity="0.25"/>
+  <path d="M20,380 L100,380 L140,320 L160,335 L220,365 L320,378 L400,380" stroke="#38bdf8" stroke-width="2.5" fill="none" opacity="0.45"/>
+</svg>

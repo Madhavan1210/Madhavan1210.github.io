@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
+  <rect width="400" height="260" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <text x="25" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Deep Learning HBIM Framework &bull; Terrestrial LiDAR</text>
+  <g transform="translate(40,45)">
+    <!-- Heritage Facade Point Cloud -->
+    <rect width="140" height="145" fill="#f8fafc" stroke="#94a3b8" rx="4"/>
+    <text x="10" y="18" font-size="8" font-weight="bold" fill="#334155">Heritage Facade TLS</text>
+    <path d="M 20,120 L 70,50 L 120,120 Z" stroke="#0284c7" stroke-dasharray="3,3" fill="none"/>
+    <rect x="50" y="80" width="40" height="40" fill="#e0f2fe" stroke="#0284c7"/>
+  </g>
+  <text x="195" y="125" font-size="16" fill="#64748b">→</text>
+  <g transform="translate(220,45)">
+    <!-- Parametric HBIM Digital Twin -->
+    <rect width="140" height="145" fill="#f0fdf4" stroke="#86efac" rx="4"/>
+    <text x="10" y="18" font-size="8" font-weight="bold" fill="#166534">Parametric HBIM Model</text>
+    <polygon points="20,120 70,50 120,120" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="50" y="80" width="40" height="40" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  </g>
+  <rect x="25" y="225" width="350" height="25" fill="#f1f5f9" rx="4"/>
+  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#334155">Nat. Symp. Remote Sens. 2024 &bull; Terrestrial LiDAR Heritage HBIM</text>
+</svg>
