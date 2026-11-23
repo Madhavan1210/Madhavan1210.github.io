@@ -1,7 +1,6 @@
 /* ==========================================================================
    Madhavan S - Academic Portfolio Stylesheet
-   Modern, Clean, Responsive Academic Theme (iPortfolio Inspired)
-   Updated with Custom Research Aesthetics, Transparent Overlays & DOI Reference Layout
+   Modern, Clean, Responsive Academic Theme
    ========================================================================== */
 
 :root {
@@ -36,7 +35,7 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
   --shadow-hover: 0 16px 24px -4px rgb(0 0 0 / 0.12);
 
-  --sidebar-width: 300px;
+  --sidebar-width: 290px;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -104,20 +103,19 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Profile Photo */
 .profile-img-container {
   margin: 0 auto 1.1rem;
 }
 
 .profile-avatar-img {
-  width: 116px;
-  height: 116px;
+  width: 118px;
+  height: 118px;
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
   display: block;
-  border: 3px solid rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -178,24 +176,24 @@ img {
 }
 
 .nav-menu li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  padding: 0.65rem 0.95rem;
+  padding: 0.7rem 1rem;
   color: #94a3b8;
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   border-radius: 8px;
   transition: var(--transition);
 }
 
 .nav-link i {
-  font-size: 1.05rem;
-  width: 20px;
+  font-size: 1.1rem;
+  width: 22px;
   text-align: center;
   color: #64748b;
   transition: color 0.2s;
@@ -288,7 +286,7 @@ img {
 }
 
 /* ==========================================================================
-   HERO SECTION (Sea Ice Thickness & Satellite Altimetry Background)
+   HERO SECTION
    ========================================================================== */
 .hero-section {
   position: relative;
@@ -296,15 +294,38 @@ img {
   display: flex;
   align-items: center;
   padding: 5rem 4rem 4rem;
-  background: #050a18 url('assets/hero-altimetry.svg') center center / cover no-repeat;
+  background-color: #071224;
   color: #ffffff;
   overflow: hidden;
+}
+
+.hero-bg-animated {
+  position: absolute;
+  inset: -35px;
+  background: url('assets/hero-bg.jpg') center center / cover no-repeat;
+  animation: heroDrift 28s ease-in-out infinite alternate;
+  z-index: 0;
+  will-change: transform;
+}
+
+@keyframes heroDrift {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.02) translate(1.5%, 1.2%);
+  }
 }
 
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(5, 10, 24, 0.82) 0%, rgba(11, 23, 54, 0.75) 50%, rgba(15, 23, 42, 0.86) 100%);
+  background: linear-gradient(135deg, rgba(6, 14, 30, 0.65) 0%, rgba(11, 23, 54, 0.52) 50%, rgba(15, 23, 42, 0.68) 100%);
+  backdrop-filter: blur(0.5px);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -351,6 +372,7 @@ img {
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
 }
 
 .text-gradient {
@@ -364,6 +386,7 @@ img {
   font-weight: 500;
   color: #cbd5e1;
   margin-bottom: 1.25rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .typed-text {
@@ -386,9 +409,10 @@ img {
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: #e2e8f0;
   margin-bottom: 2rem;
   max-width: 720px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .hero-buttons {
@@ -449,7 +473,7 @@ img {
 }
 
 .section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 2.8rem;
 }
 
 .section-tag {
@@ -498,109 +522,6 @@ img {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 1.1rem;
-}
-
-.info-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
-}
-
-.info-badges .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: var(--primary-soft);
-  color: var(--primary-dark);
-  padding: 0.45rem 0.9rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* ==========================================================================
-   RESEARCH INTERESTS (Transparent Background Images with Clear Text)
-   ========================================================================== */
-.research-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.8rem;
-}
-
-.research-card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2.4rem 2rem;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-/* Specific background images */
-.card-altimetry   { background-image: url('assets/research/altimetry.svg'); }
-.card-lidar       { background-image: url('assets/research/lidar.svg'); }
-.card-deeplearning{ background-image: url('assets/research/deeplearning.svg'); }
-.card-hbim        { background-image: url('assets/research/hbim.svg'); }
-.card-environmental{ background-image: url('assets/research/environmental.svg'); }
-.card-surveying   { background-image: url('assets/research/surveying.svg'); }
-
-/* Transparent Overlay for Crisp Legibility */
-.research-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(30, 41, 59, 0.84) 100%);
-  backdrop-filter: blur(2px);
-  z-index: 1;
-  transition: var(--transition);
-}
-
-.research-card:hover::before {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.80) 0%, rgba(30, 41, 59, 0.72) 100%);
-}
-
-.research-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-  border-color: rgba(96, 165, 250, 0.4);
-}
-
-.research-card > * {
-  position: relative;
-  z-index: 2;
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(37, 99, 235, 0.25);
-  color: #60a5fa;
-  border: 1px solid rgba(96, 165, 250, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.45rem;
-  margin-bottom: 1.25rem;
-}
-
-.research-card h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.6rem;
-  letter-spacing: -0.01em;
-}
-
-.research-card p {
-  font-size: 0.92rem;
-  color: #cbd5e1;
-  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -717,8 +638,199 @@ img {
 }
 
 /* ==========================================================================
-   ACADEMIC EXPERIENCE
+   PUBLICATIONS SECTION
    ========================================================================== */
+.pub-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.pub-filters {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.55rem 1.15rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Google Scholar Button in Header Top-Right */
+.pub-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-scholar-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 20px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-scholar-header:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Clean, Simplified Publication Cards */
+.pub-card-ref {
+  display: flex;
+  gap: 1.8rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 1.4rem 1.6rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  align-items: center;
+}
+
+.pub-card-ref:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.pub-thumb-col {
+  flex-shrink: 0;
+  width: 190px;
+}
+
+.pub-thumb-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.pub-thumb-img:hover {
+  transform: scale(1.02);
+}
+
+.pub-content-col {
+  flex: 1;
+}
+
+.pub-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.45rem;
+}
+
+.pub-title-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pub-title-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.pub-title-static {
+  color: var(--text-main);
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.pub-authors strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.pub-venue-line {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.pub-journal-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.pub-date {
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   RESUME SECTION (CONTAINING ALL RESUME SUB-SECTIONS)
+   ========================================================================== */
+.resume-subsection {
+  margin-bottom: 4rem;
+}
+
+.resume-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.resume-subheading {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.resume-subheading i {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+/* Experience Cards */
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -792,237 +904,94 @@ img {
 }
 
 /* ==========================================================================
-   PUBLICATIONS SECTION (Reference-Style Card Layout with Thumbnails & DOI)
+   RESEARCH INTERESTS (Lighter, Clear Background Images per change #3)
    ========================================================================== */
-.pub-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 2.2rem;
-  flex-wrap: wrap;
-}
-
-.pub-filters {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--bg-surface);
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.filter-btn:hover {
-  border-color: var(--primary-light);
-  color: var(--primary);
-}
-
-.filter-btn.active {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-
-.pub-search {
-  position: relative;
-  min-width: 260px;
-}
-
-.pub-search i {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #94a3b8;
-  font-size: 0.85rem;
-}
-
-.pub-search input {
-  width: 100%;
-  padding: 0.55rem 1rem 0.55rem 2.4rem;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--bg-surface);
-  font-size: 0.85rem;
-  font-family: var(--font-main);
-  outline: none;
-  transition: var(--transition);
-}
-
-.pub-search input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.publications-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-/* Reference Card Format */
-.pub-card-ref {
-  display: flex;
+.research-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.8rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  padding: 1.6rem;
+}
+
+.research-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  padding: 2.2rem 1.8rem;
   border-radius: 14px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
-  align-items: flex-start;
 }
 
-.pub-card-ref:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-  border-color: #cbd5e1;
-}
+.card-altimetry   { background-image: url('assets/research/altimetry.svg'); }
+.card-lidar       { background-image: url('assets/research/lidar.svg'); }
+.card-deeplearning{ background-image: url('assets/research/deeplearning.svg'); }
+.card-hbim        { background-image: url('assets/research/hbim.svg'); }
+.card-environmental{ background-image: url('assets/research/environmental.svg'); }
+.card-surveying   { background-image: url('assets/research/surveying.svg'); }
 
-.pub-thumb-col {
-  flex-shrink: 0;
-  width: 210px;
-}
-
-.pub-thumb-img {
-  width: 100%;
-  height: 145px;
-  object-fit: contain;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 4px;
-  transition: transform 0.25s ease;
-}
-
-.pub-thumb-img:hover {
-  transform: scale(1.02);
-}
-
-.pub-content-col {
-  flex: 1;
-}
-
-.pub-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 0.4rem;
-}
-
-.pub-title-link {
-  color: var(--primary);
-}
-
-.pub-title-link:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
-}
-
-.pub-authors {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
-}
-
-.pub-authors strong {
-  color: var(--text-main);
-  font-weight: 700;
-}
-
-.pub-venue-line {
-  font-size: 0.88rem;
-  color: #64748b;
-  margin-bottom: 0.65rem;
-}
-
-.pub-journal-name {
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.pub-doi-link {
-  color: var(--primary);
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-}
-
-.pub-abstract-text {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 0.9rem;
-}
-
-.pub-tags-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tag-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.3rem 0.65rem;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: var(--bg-surface-alt);
-  color: var(--text-main);
-  cursor: pointer;
+/* Lighter overlay with light blur so background image is clearly visible */
+.research-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(8, 15, 30, 0.62) 0%, rgba(15, 23, 42, 0.52) 100%);
+  backdrop-filter: blur(1.5px);
+  z-index: 1;
   transition: var(--transition);
 }
 
-.tag-btn:hover {
-  background: var(--primary-soft);
-  color: var(--primary);
-  border-color: var(--primary-light);
+.research-card:hover::before {
+  background: linear-gradient(135deg, rgba(8, 15, 30, 0.45) 0%, rgba(15, 23, 42, 0.35) 100%);
 }
 
-.pub-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 20px;
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(96, 165, 250, 0.5);
 }
 
-.pub-tag.first-author-tag {
-  background: #0f172a;
+.research-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.4);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.research-card h3 {
+  font-size: 1.22rem;
+  font-weight: 800;
   color: #ffffff;
-  border-color: #0f172a;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.85);
 }
 
-.bibtex-box {
-  display: none;
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #0f172a;
-  color: #e2e8f0;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  line-height: 1.5;
+.research-card p {
+  font-size: 0.95rem;
+  color: #f1f5f9;
+  line-height: 1.6;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
 }
 
 /* ==========================================================================
-   HONORS & AWARDS (Green Removed, Sleek Black/Neutral Accents)
+   HONORS & AWARDS
    ========================================================================== */
 .awards-grid {
   display: grid;
@@ -1087,7 +1056,6 @@ img {
   margin-bottom: 0.5rem;
 }
 
-/* Black text for prize/grant per change #9 */
 .award-prize {
   font-size: 0.88rem;
   color: #0f172a;
@@ -1110,10 +1078,10 @@ img {
 }
 
 .col-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-main);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1124,7 +1092,7 @@ img {
 }
 
 .talk-item {
-  background: var(--bg-surface-alt);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 12px;
@@ -1199,7 +1167,7 @@ img {
 }
 
 /* ==========================================================================
-   TECHNICAL SKILLS (Transparent Background Images with Clear Text)
+   TECHNICAL SKILLS (Lighter, Clear Background Images per change #3)
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -1212,7 +1180,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(15, 23, 42, 0.2);
   padding: 2.2rem 1.8rem;
   border-radius: 14px;
   overflow: hidden;
@@ -1220,30 +1188,30 @@ img {
   transition: var(--transition);
 }
 
-/* Background SVGs for skills */
 .skill-prog  { background-image: url('assets/skills/programming.svg'); }
 .skill-geo   { background-image: url('assets/skills/geospatial.svg'); }
 .skill-photo { background-image: url('assets/skills/photogrammetry.svg'); }
 .skill-pc    { background-image: url('assets/skills/pointcloud.svg'); }
 
+/* Lighter overlay with light blur so background image is clearly visible */
 .skill-category::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.86) 100%);
-  backdrop-filter: blur(2px);
+  background: linear-gradient(135deg, rgba(8, 15, 30, 0.62) 0%, rgba(15, 23, 42, 0.52) 100%);
+  backdrop-filter: blur(1.5px);
   z-index: 1;
   transition: var(--transition);
 }
 
 .skill-category:hover::before {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.78) 100%);
+  background: linear-gradient(135deg, rgba(8, 15, 30, 0.45) 0%, rgba(15, 23, 42, 0.35) 100%);
 }
 
 .skill-category:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(96, 165, 250, 0.4);
+  border-color: rgba(96, 165, 250, 0.5);
 }
 
 .skill-category > * {
@@ -1260,13 +1228,14 @@ img {
 
 .skill-cat-header i {
   font-size: 1.35rem;
-  color: #60a5fa;
+  color: #93c5fd;
 }
 
 .skill-cat-header h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
 }
 
 .skill-pills {
@@ -1276,15 +1245,16 @@ img {
 }
 
 .skill-pill {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.72);
   color: #f8fafc;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(4px);
-  font-size: 0.82rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 0.38rem 0.8rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 20px;
   transition: var(--transition);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .skill-pill:hover {
@@ -1527,14 +1497,10 @@ img {
     align-items: stretch;
   }
 
-  .pub-search {
-    width: 100%;
-  }
-
-  /* Responsive publication cards: stack figure on top of text */
   .pub-card-ref {
     flex-direction: column;
     gap: 1.2rem;
+    align-items: flex-start;
   }
 
   .pub-thumb-col {
@@ -1546,13 +1512,12 @@ img {
   }
 }
 
-/* PRINT STYLESHEET (FOR SAVING TO PDF) */
+/* PRINT STYLESHEET */
 @media print {
   .sidebar,
   .mobile-nav-toggle,
   .hero-buttons,
   .pub-controls,
-  .tag-btn,
   .footer {
     display: none !important;
   }

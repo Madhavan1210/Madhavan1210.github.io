@@ -125,37 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav(); // Initial highlight on page load
 
   /* ==========================================================================
-     4. PUBLICATION FILTERING & SEARCH
+     4. PUBLICATION FILTERING
      ========================================================================== */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const pubItems = document.querySelectorAll('.pub-card-ref, .pub-item');
-  const searchInput = document.getElementById('pubSearchInput');
 
-  let currentCategory = 'all';
-  let searchQuery = '';
+  let currentCategory = 'peer-reviewed';
 
   function applyFilters() {
     pubItems.forEach(item => {
       const category = item.getAttribute('data-category');
-      const isFirstAuthor = item.getAttribute('data-firstauthor') === 'true';
-      const text = item.textContent.toLowerCase();
-
-      // Check category match
-      let matchesCat = false;
-      if (currentCategory === 'all') {
-        matchesCat = true;
-      } else if (currentCategory === 'first-author') {
-        matchesCat = isFirstAuthor;
-      } else {
-        matchesCat = (category === currentCategory);
-      }
-
-      // Check search match
-      const matchesSearch = !searchQuery || text.includes(searchQuery);
-
-      if (matchesCat && matchesSearch) {
+      if (category === currentCategory) {
         item.style.display = 'flex';
         item.style.animation = 'fadeIn 0.3s ease';
       } else {
@@ -173,24 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = e.target.value.trim().toLowerCase();
-      applyFilters();
-    });
-  }
+  // Apply default filter on initial load
+  applyFilters();
 
 });
-
-/* ==========================================================================
-   5. BIBTEX TOGGLE ACCORDION
-   ========================================================================== */
-function toggleBibtex(elementId) {
-  const box = document.getElementById(elementId);
-  if (!box) return;
-  if (box.style.display === 'block') {
-    box.style.display = 'none';
-  } else {
-    box.style.display = 'block';
-  }
-}

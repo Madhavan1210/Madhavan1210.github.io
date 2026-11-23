@@ -1,24 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
   <rect width="400" height="260" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
-  <!-- Groundwater Well Contours -->
-  <g transform="translate(20,25)">
-    <rect width="180" height="190" fill="#f0fdf4" stroke="#86efac" rx="4"/>
-    <text x="12" y="20" font-family="sans-serif" font-size="10" font-weight="bold" fill="#166534">WSN Hydro Sensor Grid</text>
-    <path d="M 30,50 Q 80,40 140,80 T 160,160" stroke="#3b82f6" stroke-width="2" fill="none"/>
-    <circle cx="50" cy="80" r="5" fill="#15803d"/><text x="60" y="84" font-size="8" fill="#14532d">GW-1</text>
-    <circle cx="110" cy="70" r="5" fill="#15803d"/><text x="120" y="74" font-size="8" fill="#14532d">GW-2</text>
-    <circle cx="80" cy="130" r="5" fill="#15803d"/><text x="90" y="134" font-size="8" fill="#14532d">GW-3</text>
-    <circle cx="140" cy="140" r="5" fill="#15803d"/><text x="125" y="155" font-size="8" fill="#14532d">GW-4</text>
+  <!-- 1820 Archival Map vs 2020 Satellite -->
+  <g transform="translate(25,25)">
+    <rect width="165" height="190" fill="#fef3c7" stroke="#d97706" rx="4"/>
+    <text x="10" y="20" font-family="serif" font-size="10" font-weight="bold" fill="#78350f">Archival Map (1820)</text>
+    <!-- Old Fortified City Boundary -->
+    <polygon points="40,50 120,40 140,110 80,140 30,100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <text x="50" y="85" font-family="serif" font-size="9" fill="#92400e">Historic Core</text>
+    <path d="M 15,160 Q 60,140 100,165 T 150,150" stroke="#0284c7" stroke-width="2" fill="none"/>
   </g>
-  <!-- Time Series Sensor Chart -->
-  <g transform="translate(215,25)">
-    <rect width="165" height="190" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
-    <text x="12" y="20" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1e293b">pH &amp; TDS Telemetry</text>
-    <line x1="20" y1="160" x2="150" y2="160" stroke="#94a3b8"/>
-    <line x1="20" y1="40" x2="20" y2="160" stroke="#94a3b8"/>
-    <path d="M 20,110 L 45,95 L 75,120 L 105,70 L 135,85 L 150,65" fill="none" stroke="#2563eb" stroke-width="2"/>
-    <path d="M 20,140 L 45,135 L 75,145 L 105,110 L 135,130 L 150,115" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-dasharray="3,3"/>
+  <g transform="translate(205,25)">
+    <rect width="170" height="190" fill="#f1f5f9" stroke="#64748b" rx="4"/>
+    <text x="10" y="20" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Remote Sensing (2020)</text>
+    <!-- Sprawling Built-Up Matrix -->
+    <rect x="25" y="35" width="120" height="135" fill="#fca5a5" opacity="0.6"/>
+    <polygon points="50,60 110,55 120,100 80,120 45,95" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <text x="30" y="155" font-size="8" font-weight="bold" fill="#b91c1c">+480% Built-Up Growth</text>
   </g>
-  <rect x="20" y="225" width="360" height="25" fill="#f1f5f9" rx="4"/>
-  <text x="30" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#334155">J. Ind. Inf. Integr. 2024 &bull; Groundwater Monitoring Framework</text>
+  <rect x="25" y="225" width="350" height="25" fill="#fefce8" rx="4"/>
+  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#854d0e">J. Geomatics 2025 &bull; Built-Up Area Growth Using Archival Maps</text>
 </svg>

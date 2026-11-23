@@ -1,20 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
   <rect width="400" height="260" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
-  <!-- GIS Waste Dump Boundary Map -->
-  <polygon points="50,40 180,30 210,130 140,180 40,140" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
-  <circle cx="90" cy="80" r="5" fill="#b91c1c"/><text x="100" y="85" font-family="sans-serif" font-size="9" fill="#7f1d1d" font-weight="bold">IoT Node 1</text>
-  <circle cx="160" cy="70" r="5" fill="#b91c1c"/><text x="130" y="60" font-family="sans-serif" font-size="9" fill="#7f1d1d" font-weight="bold">IoT Node 2</text>
-  <circle cx="130" cy="140" r="5" fill="#b91c1c"/><text x="140" y="145" font-family="sans-serif" font-size="9" fill="#7f1d1d" font-weight="bold">IoT Node 3</text>
-  <!-- Concentration Contours -->
-  <ellipse cx="120" cy="100" rx="45" ry="30" fill="none" stroke="#f87171" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <ellipse cx="120" cy="100" rx="75" ry="50" fill="none" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <!-- Right Chart: Environmental Impact Index -->
-  <rect x="230" y="30" width="150" height="190" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
-  <text x="245" y="50" font-family="sans-serif" font-size="10" font-weight="bold" fill="#334155">Impact Score vs Distance</text>
-  <line x1="250" y1="180" x2="365" y2="180" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="250" y1="70" x2="250" y2="180" stroke="#64748b" stroke-width="1.5"/>
-  <path d="M 250,85 Q 280,95 310,140 T 365,175" fill="none" stroke="#ef4444" stroke-width="2.5"/>
-  <text x="270" y="200" font-family="sans-serif" font-size="8" fill="#64748b">Buffer Zone (m)</text>
-  <rect x="40" y="225" width="320" height="22" fill="#f1f5f9" rx="4"/>
-  <text x="50" y="240" font-family="sans-serif" font-size="10" font-weight="600" fill="#475569">Sustainability 2023 &bull; C&amp;D Waste GIS-IoT Framework</text>
+  <text x="25" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">TLS Point Cloud to Historic BIM (HBIM) Pipeline</text>
+  <!-- Step 1: Raw LiDAR Point Cloud -->
+  <g transform="translate(25,40)">
+    <rect width="95" height="150" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+    <text x="8" y="16" font-size="8" font-weight="bold" fill="#334155">1. Raw TLS Cloud</text>
+    <g fill="#0284c7" opacity="0.6">
+      <circle cx="20" cy="40" r="1.5"/><circle cx="35" cy="35" r="1.5"/><circle cx="50" cy="42" r="1.5"/><circle cx="70" cy="38" r="1.5"/>
+      <circle cx="25" cy="70" r="1.5"/><circle cx="45" cy="65" r="1.5"/><circle cx="65" cy="72" r="1.5"/><circle cx="75" cy="90" r="1.5"/>
+      <circle cx="20" cy="110" r="1.5"/><circle cx="50" cy="115" r="1.5"/><circle cx="75" cy="110" r="1.5"/>
+    </g>
+  </g>
+  <text x="127" y="120" font-size="16" fill="#64748b">→</text>
+  <!-- Step 2: Surface Mesh Reconstruction -->
+  <g transform="translate(145,40)">
+    <rect width="105" height="150" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+    <text x="8" y="16" font-size="8" font-weight="bold" fill="#334155">2. 3D Triangular Mesh</text>
+    <path d="M 20,130 L 52,40 L 85,130 Z" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+    <line x1="52" y1="40" x2="52" y2="130" stroke="#3b82f6"/>
+    <line x1="36" y1="85" x2="68" y2="85" stroke="#3b82f6"/>
+  </g>
+  <text x="257" y="120" font-size="16" fill="#64748b">→</text>
+  <!-- Step 3: Parametric HBIM Model -->
+  <g transform="translate(275,40)">
+    <rect width="100" height="150" fill="#eff6ff" stroke="#3b82f6" rx="4"/>
+    <text x="8" y="16" font-size="8" font-weight="bold" fill="#1d4ed8">3. Digital Twin</text>
+    <polygon points="15,60 50,25 85,60 85,135 15,135" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="35" y="80" width="30" height="55" fill="#ffffff" stroke="#1d4ed8"/>
+  </g>
+  <rect x="25" y="225" width="350" height="25" fill="#f0f9ff" rx="4"/>
+  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#0369a1">J. Indian Soc. Remote Sens. 2026 &bull; HBIM &amp; Digital Twin Creation</text>
 </svg>

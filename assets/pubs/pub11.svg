@@ -1,21 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
   <rect width="400" height="260" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
-  <text x="25" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Deep Learning HBIM Framework &bull; Terrestrial LiDAR</text>
-  <g transform="translate(40,45)">
-    <!-- Heritage Facade Point Cloud -->
-    <rect width="140" height="145" fill="#f8fafc" stroke="#94a3b8" rx="4"/>
-    <text x="10" y="18" font-size="8" font-weight="bold" fill="#334155">Heritage Facade TLS</text>
-    <path d="M 20,120 L 70,50 L 120,120 Z" stroke="#0284c7" stroke-dasharray="3,3" fill="none"/>
-    <rect x="50" y="80" width="40" height="40" fill="#e0f2fe" stroke="#0284c7"/>
-  </g>
-  <text x="195" y="125" font-size="16" fill="#64748b">→</text>
-  <g transform="translate(220,45)">
-    <!-- Parametric HBIM Digital Twin -->
-    <rect width="140" height="145" fill="#f0fdf4" stroke="#86efac" rx="4"/>
-    <text x="10" y="18" font-size="8" font-weight="bold" fill="#166534">Parametric HBIM Model</text>
-    <polygon points="20,120 70,50 120,120" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
-    <rect x="50" y="80" width="40" height="40" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
-  </g>
-  <rect x="25" y="225" width="350" height="25" fill="#f1f5f9" rx="4"/>
-  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#334155">Nat. Symp. Remote Sens. 2024 &bull; Terrestrial LiDAR Heritage HBIM</text>
+  <!-- Drone Trajectory over Dump Yard -->
+  <rect x="30" y="30" width="180" height="180" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
+  <text x="40" y="48" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0369a1">UAV Flight Waypoints</text>
+  <path d="M 50,70 L 180,70 L 180,105 L 50,105 L 50,140 L 180,140 L 180,175 L 50,175" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+  <!-- Drone Icon -->
+  <circle cx="115" cy="105" r="7" fill="#0ea5e9"/>
+  <line x1="105" y1="97" x2="125" y2="113" stroke="#0369a1" stroke-width="2"/>
+  <line x1="105" y1="113" x2="125" y2="97" stroke="#0369a1" stroke-width="2"/>
+  <!-- Right Chart: Gas Concentration Curve -->
+  <rect x="225" y="30" width="155" height="180" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
+  <text x="235" y="48" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Air Pollutant Levels (PM2.5)</text>
+  <line x1="240" y1="175" x2="365" y2="175" stroke="#64748b"/>
+  <line x1="240" y1="65" x2="240" y2="175" stroke="#64748b"/>
+  <path d="M 240,160 L 260,150 L 280,85 L 300,100 L 320,135 L 340,75 L 365,110" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="30" y="222" width="350" height="25" fill="#f0f9ff" rx="4"/>
+  <text x="45" y="238" font-family="sans-serif" font-size="10" font-weight="600" fill="#0369a1">Sustainability 2023 &bull; Smart Drones &amp; Geospatial Air Quality</text>
 </svg>

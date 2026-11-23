@@ -1,22 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
   <rect width="400" height="260" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
-  <!-- 1820 Archival Map vs 2020 Satellite -->
-  <g transform="translate(25,25)">
-    <rect width="165" height="190" fill="#fef3c7" stroke="#d97706" rx="4"/>
-    <text x="10" y="20" font-family="serif" font-size="10" font-weight="bold" fill="#78350f">Archival Map (1820)</text>
-    <!-- Old Fortified City Boundary -->
-    <polygon points="40,50 120,40 140,110 80,140 30,100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
-    <text x="50" y="85" font-family="serif" font-size="9" fill="#92400e">Historic Core</text>
-    <path d="M 15,160 Q 60,140 100,165 T 150,150" stroke="#0284c7" stroke-width="2" fill="none"/>
+  <text x="25" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Cross-Domain 3M &amp; ArCHX Benchmark Accuracy (OA / mIoU)</text>
+  <!-- Confusion Matrix & Benchmark Graph -->
+  <g transform="translate(30,40)">
+    <rect width="160" height="150" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
+    <text x="12" y="18" font-size="9" font-weight="bold" fill="#334155">Benchmark Transfer</text>
+    <rect x="25" y="35" width="50" height="40" fill="#2563eb"/><text x="35" y="60" fill="#ffffff" font-size="10" font-weight="bold">92.1%</text>
+    <rect x="80" y="35" width="50" height="40" fill="#93c5fd"/><text x="90" y="60" fill="#1e3a8a" font-size="10" font-weight="bold">81.4%</text>
+    <rect x="25" y="80" width="50" height="40" fill="#93c5fd"/><text x="35" y="105" fill="#1e3a8a" font-size="10" font-weight="bold">78.6%</text>
+    <rect x="80" y="80" width="50" height="40" fill="#2563eb"/><text x="90" y="105" fill="#ffffff" font-size="10" font-weight="bold">89.7%</text>
+    <text x="30" y="135" font-size="7" fill="#64748b">3M Domain &bull; ArCHX</text>
   </g>
-  <g transform="translate(205,25)">
-    <rect width="170" height="190" fill="#f1f5f9" stroke="#64748b" rx="4"/>
-    <text x="10" y="20" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a">Remote Sensing (2020)</text>
-    <!-- Sprawling Built-Up Matrix -->
-    <rect x="25" y="35" width="120" height="135" fill="#fca5a5" opacity="0.6"/>
-    <polygon points="50,60 110,55 120,100 80,120 45,95" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
-    <text x="30" y="155" font-size="8" font-weight="bold" fill="#b91c1c">+480% Built-Up Growth</text>
+  <g transform="translate(205,40)">
+    <rect width="165" height="150" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
+    <text x="12" y="18" font-size="9" font-weight="bold" fill="#334155">Precision-Recall Curve</text>
+    <line x1="20" y1="130" x2="145" y2="130" stroke="#64748b"/>
+    <line x1="20" y1="30" x2="20" y2="130" stroke="#64748b"/>
+    <path d="M 20,40 Q 90,45 115,85 T 145,128" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="65" y="70" font-size="8" fill="#1d4ed8" font-weight="bold">AUC: 0.94</text>
   </g>
-  <rect x="25" y="225" width="350" height="25" fill="#fefce8" rx="4"/>
-  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#854d0e">J. Geomatics 2025 &bull; Built-Up Area Growth Using Archival Maps</text>
+  <rect x="25" y="225" width="350" height="25" fill="#eff6ff" rx="4"/>
+  <text x="35" y="241" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#1e40af">ISPRS Archives 2025 &bull; Cross-Domain Urban &amp; Heritage Point Clouds</text>
 </svg>
