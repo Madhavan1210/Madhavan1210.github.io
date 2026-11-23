@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTarget = document.getElementById('typedText');
   const words = [
     'Ph.D. Scholar at IIT Bombay.',
-    'Remote Sensing & GIS Expert.',
+    'Remote Sensing & GIS Specialist.',
     'Satellite Altimetry & SAR Researcher.',
     'Deep Learning & 3D Point Cloud Researcher.',
-    'Photogrammetry & HBIM Expert.'
+    'Photogrammetry & HBIM Specialist.'
   ];
 
   let wordIndex = 0;
