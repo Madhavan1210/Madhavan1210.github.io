@@ -1,6 +1,7 @@
 /* ==========================================================================
    Madhavan S - Academic Portfolio Stylesheet
    Modern, Clean, Responsive Academic Theme (iPortfolio Inspired)
+   Updated with Custom Research Aesthetics, Transparent Overlays & DOI Reference Layout
    ========================================================================== */
 
 :root {
@@ -14,8 +15,8 @@
   --bg-sidebar: #0f172a;
   --bg-sidebar-hover: #1e293b;
 
-  --text-main: #1e293b;
-  --text-muted: #64748b;
+  --text-main: #0f172a;
+  --text-muted: #475569;
   --text-light: #94a3b8;
   --text-white: #ffffff;
 
@@ -25,16 +26,15 @@
   --primary-soft: #eff6ff;
 
   --accent-cyan: #0284c7;
-  --accent-gold: #d97706;
-  --accent-emerald: #059669;
+  --accent-dark: #0f172a;
 
   --border: #e2e8f0;
   --border-subtle: #f1f5f9;
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
-  --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-hover: 0 16px 24px -4px rgb(0 0 0 / 0.12);
 
   --sidebar-width: 300px;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,26 +104,27 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.profile-avatar {
-  width: 108px;
-  height: 108px;
+/* Profile Photo */
+.profile-img-container {
   margin: 0 auto 1.1rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: 1px;
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-  transition: transform 0.3s ease;
 }
 
-.profile-avatar:hover {
-  transform: scale(1.05);
+.profile-avatar-img {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-avatar-img:hover {
+  transform: scale(1.04);
+  border-color: var(--primary-light);
 }
 
 .profile-name {
@@ -234,12 +235,12 @@ img {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
-  padding: 0.65rem 0.8rem;
-  background: rgba(37, 99, 235, 0.18);
-  border: 1px solid rgba(37, 99, 235, 0.4);
+  padding: 0.7rem 0.8rem;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.45);
   color: #93c5fd;
   border-radius: 8px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   margin-bottom: 0.85rem;
   transition: var(--transition);
@@ -248,6 +249,7 @@ img {
 .btn-sidebar-cv:hover {
   background: var(--primary);
   color: #ffffff;
+  border-color: var(--primary);
 }
 
 .sidebar-footer .copyright {
@@ -286,15 +288,15 @@ img {
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION (Sea Ice Thickness & Satellite Altimetry Background)
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 5rem 4rem 4rem;
-  background: linear-gradient(135deg, #0b1329 0%, #172554 50%, #1e1b4b 100%);
+  background: #050a18 url('assets/hero-altimetry.svg') center center / cover no-repeat;
   color: #ffffff;
   overflow: hidden;
 }
@@ -302,16 +304,14 @@ img {
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 15% 25%, rgba(37, 99, 235, 0.3) 0%, transparent 40%),
-    radial-gradient(circle at 85% 75%, rgba(2, 132, 199, 0.25) 0%, transparent 45%);
+  background: linear-gradient(135deg, rgba(5, 10, 24, 0.82) 0%, rgba(11, 23, 54, 0.75) 50%, rgba(15, 23, 42, 0.86) 100%);
   pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: 860px;
 }
 
 .badge-pill {
@@ -386,7 +386,7 @@ img {
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #94a3b8;
+  color: #cbd5e1;
   margin-bottom: 2rem;
   max-width: 720px;
 }
@@ -394,7 +394,6 @@ img {
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
 
@@ -435,47 +434,6 @@ img {
   background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
   transform: translateY(-2px);
-}
-
-/* Stats Counter Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.stat-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.2rem 1.4rem;
-  border-radius: 12px;
-  transition: var(--transition);
-}
-
-.stat-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.stat-number {
-  display: block;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  font-family: var(--font-mono);
-  line-height: 1.1;
-  margin-bottom: 0.25rem;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 /* ==========================================================================
@@ -523,10 +481,8 @@ img {
    ABOUT SECTION
    ========================================================================== */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  display: block;
+  max-width: 920px;
 }
 
 .about-bio p.lead {
@@ -563,90 +519,88 @@ img {
   font-weight: 600;
 }
 
-.about-details-card {
-  background: var(--bg-surface-alt);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  color: var(--text-main);
-}
-
-.details-list {
-  list-style: none;
-}
-
-.details-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.92rem;
-  color: var(--text-muted);
-}
-
-.details-list li:last-child {
-  border-bottom: none;
-}
-
-.details-list li strong {
-  color: var(--text-main);
-  display: inline-block;
-  min-width: 110px;
-}
-
 /* ==========================================================================
-   RESEARCH INTERESTS
+   RESEARCH INTERESTS (Transparent Background Images with Clear Text)
    ========================================================================== */
 .research-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
 }
 
 .research-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  padding: 2rem 1.6rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.4rem 2rem;
   border-radius: 14px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+}
+
+/* Specific background images */
+.card-altimetry   { background-image: url('assets/research/altimetry.svg'); }
+.card-lidar       { background-image: url('assets/research/lidar.svg'); }
+.card-deeplearning{ background-image: url('assets/research/deeplearning.svg'); }
+.card-hbim        { background-image: url('assets/research/hbim.svg'); }
+.card-environmental{ background-image: url('assets/research/environmental.svg'); }
+.card-surveying   { background-image: url('assets/research/surveying.svg'); }
+
+/* Transparent Overlay for Crisp Legibility */
+.research-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(30, 41, 59, 0.84) 100%);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.research-card:hover::before {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.80) 0%, rgba(30, 41, 59, 0.72) 100%);
 }
 
 .research-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
-  border-color: var(--primary-light);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.research-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .card-icon {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
-  background: var(--primary-soft);
-  color: var(--primary);
+  background: rgba(37, 99, 235, 0.25);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   margin-bottom: 1.25rem;
 }
 
 .research-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #ffffff;
   margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
 
 .research-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.6;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -713,9 +667,9 @@ img {
   border-radius: 6px;
 }
 
-.grade-badge.highlight-gold {
-  background: #fef3c7;
-  color: #92400e;
+.grade-badge.highlight-dark {
+  background: #0f172a;
+  color: #ffffff;
 }
 
 .timeline-title {
@@ -838,52 +792,14 @@ img {
 }
 
 /* ==========================================================================
-   PUBLICATIONS SECTION
+   PUBLICATIONS SECTION (Reference-Style Card Layout with Thumbnails & DOI)
    ========================================================================== */
-.pub-summary-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.pub-sum-item {
-  background: var(--bg-surface-alt);
-  border: 1px solid var(--border);
-  padding: 1.2rem;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.pub-sum-item.highlight {
-  background: #f0fdf4;
-  border-color: #bbf7d0;
-}
-
-.pub-sum-item .num {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 800;
-  font-family: var(--font-mono);
-  color: var(--primary);
-}
-
-.pub-sum-item.highlight .num {
-  color: var(--accent-emerald);
-}
-
-.pub-sum-item .txt {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
 .pub-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
   flex-wrap: wrap;
 }
 
@@ -950,119 +866,146 @@ img {
 .publications-list {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.6rem;
 }
 
-.pub-item {
+/* Reference Card Format */
+.pub-card-ref {
+  display: flex;
+  gap: 1.8rem;
   background: var(--bg-surface);
   border: 1px solid var(--border);
   padding: 1.6rem;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  align-items: flex-start;
 }
 
-.pub-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.pub-card-ref:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
   border-color: #cbd5e1;
 }
 
-.pub-badge-row {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.6rem;
-  align-items: center;
+.pub-thumb-col {
+  flex-shrink: 0;
+  width: 210px;
 }
 
-.badge-cat {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+.pub-thumb-img {
+  width: 100%;
+  height: 145px;
+  object-fit: contain;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 4px;
+  transition: transform 0.25s ease;
 }
 
-.badge-cat.journal {
-  background: #dbeafe;
-  color: #1e40af;
+.pub-thumb-img:hover {
+  transform: scale(1.02);
 }
 
-.badge-cat.conf {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.badge-cat.abstract {
-  background: #e0e7ff;
-  color: #3730a3;
-}
-
-.badge-cat.first-auth {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.badge-year {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-left: auto;
+.pub-content-col {
+  flex: 1;
 }
 
 .pub-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
   line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.pub-title-link {
+  color: var(--primary);
+}
+
+.pub-title-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
 }
 
 .pub-authors {
   font-size: 0.92rem;
   color: var(--text-muted);
   margin-bottom: 0.4rem;
+  line-height: 1.5;
 }
 
 .pub-authors strong {
-  color: var(--primary-dark);
-}
-
-.pub-venue {
-  font-size: 0.9rem;
   color: var(--text-main);
-  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-.pub-actions {
+.pub-venue-line {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 0.65rem;
+}
+
+.pub-journal-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.pub-doi-link {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.pub-abstract-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.pub-tags-row {
   display: flex;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
-.btn-pub-link,
-.btn-pub-bib {
+.tag-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
+  gap: 0.35rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.35rem 0.75rem;
+  padding: 0.3rem 0.65rem;
   border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--bg-surface-alt);
-  color: var(--text-muted);
+  color: var(--text-main);
   cursor: pointer;
   transition: var(--transition);
 }
 
-.btn-pub-link:hover,
-.btn-pub-bib:hover {
+.tag-btn:hover {
   background: var(--primary-soft);
   color: var(--primary);
   border-color: var(--primary-light);
+}
+
+.pub-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.pub-tag.first-author-tag {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
 }
 
 .bibtex-box {
@@ -1079,7 +1022,7 @@ img {
 }
 
 /* ==========================================================================
-   HONORS & AWARDS
+   HONORS & AWARDS (Green Removed, Sleek Black/Neutral Accents)
    ========================================================================== */
 .awards-grid {
   display: grid;
@@ -1104,15 +1047,16 @@ img {
 }
 
 .award-card.highlight-card {
-  border-left: 4px solid var(--accent-gold);
+  border-left: 4px solid #0f172a;
 }
 
 .award-icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #fef3c7;
-  color: var(--accent-gold);
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1123,8 +1067,8 @@ img {
 .award-date {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--accent-gold);
+  font-weight: 700;
+  color: #0f172a;
   display: block;
   margin-bottom: 0.2rem;
 }
@@ -1143,10 +1087,11 @@ img {
   margin-bottom: 0.5rem;
 }
 
+/* Black text for prize/grant per change #9 */
 .award-prize {
   font-size: 0.88rem;
-  color: var(--accent-emerald);
-  font-weight: 600;
+  color: #0f172a;
+  font-weight: 700;
 }
 
 .award-desc {
@@ -1226,8 +1171,8 @@ img {
 }
 
 .mem-badge {
-  background: var(--primary-soft);
-  color: var(--primary);
+  background: #0f172a;
+  color: #ffffff;
   font-weight: 800;
   font-size: 0.82rem;
   padding: 0.6rem 0.8rem;
@@ -1250,24 +1195,60 @@ img {
 }
 
 .mem-status i {
-  color: var(--accent-emerald);
+  color: #0f172a;
 }
 
 /* ==========================================================================
-   SKILLS SECTION
+   TECHNICAL SKILLS (Transparent Background Images with Clear Text)
    ========================================================================== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
 }
 
 .skill-category {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  padding: 1.8rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.2rem 1.8rem;
   border-radius: 14px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+/* Background SVGs for skills */
+.skill-prog  { background-image: url('assets/skills/programming.svg'); }
+.skill-geo   { background-image: url('assets/skills/geospatial.svg'); }
+.skill-photo { background-image: url('assets/skills/photogrammetry.svg'); }
+.skill-pc    { background-image: url('assets/skills/pointcloud.svg'); }
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.86) 100%);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.skill-category:hover::before {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.78) 100%);
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.skill-category > * {
+  position: relative;
+  z-index: 2;
 }
 
 .skill-cat-header {
@@ -1278,29 +1259,30 @@ img {
 }
 
 .skill-cat-header i {
-  font-size: 1.3rem;
-  color: var(--primary);
+  font-size: 1.35rem;
+  color: #60a5fa;
 }
 
 .skill-cat-header h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .skill-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .skill-pill {
-  background: var(--bg-surface-alt);
-  color: var(--text-main);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(4px);
   font-size: 0.82rem;
   font-weight: 600;
-  padding: 0.35rem 0.75rem;
+  padding: 0.38rem 0.8rem;
   border-radius: 20px;
   transition: var(--transition);
 }
@@ -1494,7 +1476,6 @@ img {
     padding-right: 2.5rem;
   }
 
-  .about-grid,
   .talks-service-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1549,6 +1530,20 @@ img {
   .pub-search {
     width: 100%;
   }
+
+  /* Responsive publication cards: stack figure on top of text */
+  .pub-card-ref {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .pub-thumb-col {
+    width: 100%;
+  }
+
+  .pub-thumb-img {
+    height: 180px;
+  }
 }
 
 /* PRINT STYLESHEET (FOR SAVING TO PDF) */
@@ -1557,8 +1552,7 @@ img {
   .mobile-nav-toggle,
   .hero-buttons,
   .pub-controls,
-  .btn-pub-bib,
-  .btn-pub-link,
+  .tag-btn,
   .footer {
     display: none !important;
   }

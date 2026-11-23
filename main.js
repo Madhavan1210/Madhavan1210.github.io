@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
      4. PUBLICATION FILTERING & SEARCH
      ========================================================================== */
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const pubItems = document.querySelectorAll('.pub-item');
+  const pubItems = document.querySelectorAll('.pub-card-ref, .pub-item');
   const searchInput = document.getElementById('pubSearchInput');
 
   let currentCategory = 'all';
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesSearch = !searchQuery || text.includes(searchQuery);
 
       if (matchesCat && matchesSearch) {
-        item.style.display = 'block';
+        item.style.display = 'flex';
         item.style.animation = 'fadeIn 0.3s ease';
       } else {
         item.style.display = 'none';
