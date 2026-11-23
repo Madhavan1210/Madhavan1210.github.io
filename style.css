@@ -358,13 +358,13 @@ img {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 25px rgba(0, 0, 0, 0.9);
 }
 
-/* Good visible bright electric blue for name per final cosmetics #1 */
+/* Dark blue color matching the left sidebar (#0f172a) per user request #2 */
 .text-gradient {
-  color: #38bdf8;
+  color: #0f172a;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #38bdf8;
-  text-shadow: 0 0 25px rgba(56, 189, 248, 0.85), 0 2px 10px rgba(0, 0, 0, 0.95);
+  -webkit-text-fill-color: #0f172a;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.95), 0 2px 6px rgba(255, 255, 255, 0.9);
   font-weight: 800;
 }
 
@@ -377,14 +377,14 @@ img {
 }
 
 .typed-text {
-  color: #38bdf8;
+  color: #0f172a;
   font-weight: 700;
-  text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95), 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
 .typing-cursor {
   display: inline-block;
-  background-color: #38bdf8;
+  background-color: #0f172a;
   width: 2px;
   animation: blink 1s infinite;
 }
