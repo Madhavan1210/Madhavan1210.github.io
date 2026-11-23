@@ -301,11 +301,9 @@ img {
 
 .hero-bg-animated {
   position: absolute;
-  inset: -35px;
-  background: url('assets/hero-bg.jpg') center center / cover no-repeat;
-  animation: heroDrift 28s ease-in-out infinite alternate;
+  inset: 0;
+  background: url('assets/hero-bg.gif') center center / cover no-repeat;
   z-index: 0;
-  will-change: transform;
 }
 
 @keyframes heroDrift {
