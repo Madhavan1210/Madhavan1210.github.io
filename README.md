@@ -2,7 +2,6 @@
 
 A clean, modern, and mobile-responsive academic portfolio website built specifically for **Madhavan S** (Ph.D. Research Scholar, Department of Civil Engineering, IIT Bombay). 
 
-This website follows the design and structure style of academic sites like [geet-george.github.io](https://geet-george.github.io/) (iPortfolio inspired), customized with all data from your Curriculum Vitae.
 
 ---
 
